@@ -8,32 +8,32 @@ const NAV_SECTIONS = [
   {
     label: 'Concepts',
     description: 'Algebraic model, command scopes, execution context',
-    href: '/docs/concepts/overview',
+    href: '/concepts/overview',
   },
   {
     label: 'Architecture',
     description: 'Layer breakdown, plugin system, API layer',
-    href: '/docs/architecture/layers',
+    href: '/architecture/layers',
   },
   {
     label: 'Protocols',
     description: '1inch, LiFi, Wormhole, Stargate, Uniswap v4, Aave v3',
-    href: '/docs/protocols/overview',
+    href: '/protocols/overview',
   },
   {
     label: 'Market Data',
     description: 'CoinPaprika, CoinGecko, DexScreener, 1inch charts',
-    href: '/docs/market-data/overview',
+    href: '/market-data/overview',
   },
   {
     label: 'Guides',
     description: 'Getting started, plugin authoring, faucet setup',
-    href: '/docs/guides/getting-started',
+    href: '/guides/getting-started',
   },
   {
     label: 'Reference',
     description: 'TypeScript interfaces, env vars, API routes',
-    href: '/docs/reference/core-commands',
+    href: '/reference/core-commands',
   },
 ];
 
@@ -67,10 +67,10 @@ export default function Home(): ReactNode {
             <h1 className={styles.title}>dappTerminal.</h1>
             <p className={styles.tagline}>{siteConfig.tagline}</p>
             <div className={styles.cta}>
-              <Link className={styles.ctaPrimary} to="/docs/guides/getting-started">
+              <Link className={styles.ctaPrimary} to="/guides/getting-started">
                 Get started →
               </Link>
-              <Link className={styles.ctaSecondary} to="/docs/concepts/overview">
+              <Link className={styles.ctaSecondary} to="/concepts/overview">
                 Concepts
               </Link>
             </div>

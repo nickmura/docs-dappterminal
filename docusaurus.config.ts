@@ -35,7 +35,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/nickmura/dappterminal/tree/main/docs/',
+          editUrl: 'https://github.com/nickmura/dappterminal/tree/main/',
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
@@ -76,15 +77,15 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/guides/getting-started',
+              to: '/guides/getting-started',
             },
             {
               label: 'Architecture',
-              to: '/docs/architecture/layers',
+              to: '/architecture/layers',
             },
             {
               label: 'Concepts',
-              to: '/docs/concepts/overview',
+              to: '/concepts/overview',
             },
           ],
         },
@@ -93,11 +94,11 @@ const config: Config = {
           items: [
             {
               label: 'Protocol Overview',
-              to: '/docs/protocols/overview',
+              to: '/protocols/overview',
             },
             {
               label: 'Transaction Lifecycle',
-              to: '/docs/protocols/transaction-lifecycle',
+              to: '/protocols/transaction-lifecycle',
             },
           ],
         },
