@@ -1,41 +1,50 @@
-# Website
+# dappTerminal Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Documentation site for [dappTerminal](https://github.com/nickmura/dappterminal) — a CLI-first DeFi terminal built on a fibered monoid algebraic model.
 
-## Installation
+Built with [Docusaurus](https://docusaurus.io/).
 
-```bash
-yarn
+---
+
+## Structure
+
 ```
+docs/
+├── intro.md                    # Project overview and navigation map
+├── concepts/                   # Algebraic model, command scopes, execution context
+├── architecture/               # Layer breakdown, plugin system, API layer, execution engine
+├── protocols/                  # Per-protocol docs (1inch, LiFi, Wormhole, Stargate, Uniswap v4, Aave v3)
+├── market-data/                # Market data providers (CoinPaprika, CoinGecko, DexScreener)
+├── guides/                     # Getting started, plugin authoring, faucet setup, pipeline DSL
+├── reference/                  # TypeScript interfaces, env vars, API routes, command reference
+└── internal/                   # Audit log, known issues, security findings, roadmap
+
+notes/                          # Source notes and drafts (not rendered by Docusaurus)
+```
+
+---
 
 ## Local Development
 
 ```bash
-yarn start
+pnpm install
+pnpm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Opens a live-reloading dev server at `http://localhost:3000`.
 
 ## Build
 
 ```bash
-yarn build
+pnpm build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Generates static output into `build/`. The build enforces `onBrokenLinks: 'throw'` — all internal links must resolve.
 
 ## Deployment
 
-Using SSH:
-
 ```bash
-USE_SSH=true yarn deploy
+GIT_USER=<username> pnpm deploy
 ```
 
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Builds and pushes to the `gh-pages` branch for GitHub Pages hosting.
