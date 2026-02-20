@@ -6,6 +6,11 @@ description: Prerequisites, clone, install, environment setup, and your first co
 
 # Getting Started
 
+:::caution Early Stage Documentation
+These docs are in an early stage. Content may change quickly and some details may be volatile or inaccurate.
+For questions or issues, contact the maintainer on Telegram: [t.me/nickmura2](https://t.me/nickmura2).
+:::
+
 This guide walks you through setting up dappTerminal locally and running your first commands.
 
 ---

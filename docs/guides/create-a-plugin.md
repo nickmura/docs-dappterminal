@@ -44,7 +44,7 @@ export const myProtocolPlugin: Plugin = {
   metadata: {
     id: 'my-protocol',         // Must be unique; used as fiber ID and in command registration
     name: 'My Protocol',
-    version: '1.0.0',
+    version: '0.2.0',
     description: 'My DeFi protocol integration',
     tags: ['dex', 'swap'],
   },

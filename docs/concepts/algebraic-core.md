@@ -8,7 +8,7 @@ description: The fibered monoid formal specification that underpins dappTerminal
 
 This page describes the formal command model that powers dappTerminal. It combines the practical mental model with the rigorous algebraic specification. For spec evolution notes and compliance tracking, see [Internal: Changelog](../internal/changelog).
 
-**Version:** 1.0.0 | **Status:** Implementation Complete
+**Version:** 0.2.0 | **Status:** Implementation Complete
 
 ---
 

@@ -6,6 +6,11 @@ description: DeFi protocol comparison table and how each integration differs in 
 
 # Protocol Overview
 
+:::caution Early Stage Documentation
+These docs are in an early stage. Content may change quickly and some details may be volatile or inaccurate.
+For questions or issues, contact the maintainer on Telegram: [t.me/nickmura2](https://t.me/nickmura2).
+:::
+
 All protocol integrations fit the same monoid runtime (M, ∘, e), but they diverge in how quotes are built, how transactions are prepared, and where state lives.
 
 ---

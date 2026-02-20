@@ -21,7 +21,7 @@ interface Plugin {
   metadata: {
     id: ProtocolId        // Unique identifier, e.g., 'wormhole'
     name: string          // Display name, e.g., 'Wormhole'
-    version: string       // Semver, e.g., '1.0.0'
+    version: string       // Semver, e.g., '0.2.0'
     description: string
     tags: string[]        // e.g., ['bridge', 'cross-chain']
   }
