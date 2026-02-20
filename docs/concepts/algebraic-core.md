@@ -6,7 +6,7 @@ description: The fibered monoid formal specification that underpins dappTerminal
 
 # Algebraic Core
 
-This page describes the formal command model that powers dappTerminal. It combines the practical mental model with the rigorous algebraic specification. See [FIBERED-MONOID-SPEC.md](../notes/FIBERED-MONOID-SPEC.md) in the source for complete proofs and implementation compliance tables.
+This page describes the formal command model that powers dappTerminal. It combines the practical mental model with the rigorous algebraic specification. For spec evolution notes and compliance tracking, see [Internal: Changelog](../internal/changelog).
 
 **Version:** 1.0.0 | **Status:** Implementation Complete
 
