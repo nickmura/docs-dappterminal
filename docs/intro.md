@@ -6,6 +6,11 @@ description: dappTerminal — a terminal-based interface for DeFi protocols buil
 
 # dappTerminal
 
+:::caution Early Stage Documentation
+These docs are in an early stage. Content may change quickly and some details may be volatile or inaccurate.
+For questions or issues, contact the maintainer on Telegram: [t.me/nickmura2](https://t.me/nickmura2).
+:::
+
 dappTerminal is a Next.js application that provides a terminal-based interface for interacting with multiple DeFi protocols. It is built on a **fibered monoid** algebraic structure that gives the command system provable isolation, composability, and extensibility guarantees.
 
 ## What it is

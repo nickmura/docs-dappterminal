@@ -110,7 +110,7 @@ price ETH
 price BTC --protocol coinpaprika
 ```
 
-### Search for a coin
+### Search for a coin (Not very useful currently)
 ```bash
 coinsearch solana
 ```
