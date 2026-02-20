@@ -77,8 +77,8 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
-        {/* ── Terminal preview ──────────────────── */}
-        <section className={styles.terminalSection}>
+        {/* ── Terminal preview (hidden) ─────────── */}
+        {/* <section className={styles.terminalSection}>
           <div className={styles.terminalWindow}>
             <div className={styles.terminalBar}>
               <span className={styles.terminalDot} />
@@ -105,7 +105,7 @@ export default function Home(): ReactNode {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── Navigation grid ───────────────────── */}
         <section className={styles.grid}>
