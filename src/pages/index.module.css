@@ -1,23 +1,249 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* ─── Layout ──────────────────────────────────────────────── */
+.main {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
+/* ─── Hero ────────────────────────────────────────────────── */
+.hero {
+  border-bottom: 1px solid #262626;
+  padding: 6rem 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heroInner {
+  max-width: 680px;
+  width: 100%;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #737373;
+  margin: 0 0 1.25rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fafafa;
+  margin: 0 0 1rem;
+  line-height: 1;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #737373;
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.25rem;
+  background-color: #fafafa;
+  color: #0a0a0a !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 2px;
+  border-bottom: none !important;
+  transition: background-color 0.15s ease;
+  text-decoration: none !important;
+}
+
+.ctaPrimary:hover {
+  background-color: #e5e5e5;
+  color: #0a0a0a !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.25rem;
+  background-color: transparent;
+  color: #a3a3a3 !important;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-radius: 2px;
+  border: 1px solid #262626;
+  border-bottom: 1px solid #262626 !important;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  text-decoration: none !important;
+}
+
+.ctaSecondary:hover {
+  border-color: #404040 !important;
+  color: #fafafa !important;
+  text-decoration: none !important;
+}
+
+/* ─── Terminal preview ────────────────────────────────────── */
+.terminalSection {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #262626;
+}
+
+.terminalWindow {
+  width: 100%;
+  max-width: 680px;
+  background-color: #141414;
+  border: 1px solid #262626;
+  border-radius: 4px;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
+.terminalBar {
   display: flex;
   align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1rem;
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #262626;
+}
+
+.terminalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #262626;
+  flex-shrink: 0;
+}
+
+.terminalTitle {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.75rem;
+  color: #737373;
+  font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.02em;
+}
+
+.terminalBody {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.terminalLine {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.terminalPrompt {
+  color: #404040;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.terminalCmd {
+  color: #fafafa;
+}
+
+.terminalOut {
+  color: #737373;
+  padding-left: 1.5rem;
+}
+
+.terminalCursor {
+  display: inline-block;
+  width: 7px;
+  height: 0.85em;
+  background-color: #fafafa;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ─── Navigation grid ─────────────────────────────────────── */
+.grid {
+  padding: 4rem 1.5rem 6rem;
+  display: flex;
   justify-content: center;
+}
+
+.gridInner {
+  width: 100%;
+  max-width: 680px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: #262626;
+  border: 1px solid #262626;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #0a0a0a;
+  transition: background-color 0.15s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.card:hover {
+  background-color: #141414;
+  text-decoration: none !important;
+}
+
+.cardLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fafafa;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.8rem;
+  color: #737373;
+  line-height: 1.5;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    padding: 4rem 1.25rem 3.5rem;
+  }
+
+  .gridInner {
+    grid-template-columns: 1fr;
+  }
+
+  .terminalOut {
+    padding-left: 0.75rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

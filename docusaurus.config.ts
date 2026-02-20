@@ -48,14 +48,12 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'dappTerminal',
-      logo: {
-        alt: 'dappTerminal Logo',
-        src: 'img/logo.svg',
-      },
+      title: 'dappTerminal.',
       items: [
         {
           type: 'docSidebar',
@@ -116,8 +114,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} dappTerminal. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneDark,
+      darkTheme: prismThemes.oneDark,
       additionalLanguages: ['typescript', 'bash'],
     },
   } satisfies Preset.ThemeConfig,
