@@ -1,47 +1,71 @@
 ---
 sidebar_position: 1
+title: Introduction
+description: dappTerminal — a terminal-based interface for DeFi protocols built on a fibered monoid algebraic foundation.
 ---
 
-# Tutorial Intro
+# dappTerminal
 
-Let's discover **Docusaurus in less than 5 minutes**.
+dappTerminal is a Next.js application that provides a terminal-based interface for interacting with multiple DeFi protocols. It is built on a **fibered monoid** algebraic structure that gives the command system provable isolation, composability, and extensibility guarantees.
 
-## Getting Started
+## What it is
 
-Get started by **creating a new site**.
+A composable CLI for DeFi. You type commands in a terminal, the system resolves them against a typed command registry, and protocol plugins execute them — fetching quotes, building transactions, and returning structured results. Every tab has its own execution context so you can run independent protocol sessions simultaneously.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```
+user@defi> use 1inch
+user@1inch> swap 1 eth usdc
+  → Quote: 1 ETH → 3,412 USDC (fee: 0.3%)
+  → Confirm transaction? [y/n]
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## Technology Stack
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 15, React 19, TypeScript |
+| Styling | Tailwind CSS 4 |
+| Wallet | RainbowKit + wagmi + viem |
+| State | React hooks + ExecutionContext |
+| Architecture | Fibered Monoid (algebraic structure) |
+| Database | PostgreSQL via Prisma |
 
-## Start your site
+## Implemented Protocols
 
-Run the development server:
+| Protocol | Type | Status |
+|----------|------|--------|
+| 1inch | DEX aggregator | ✅ Complete |
+| LiFi | Bridge aggregator | ✅ Complete |
+| Wormhole | Cross-chain bridge | ✅ Complete |
+| Stargate | LayerZero bridge | ✅ Complete |
+| CoinPaprika | Market data (56K+ coins) | ✅ Complete |
+| Uniswap v4 | DEX | 🚧 In progress |
+| Aave v3 | Lending | 📋 Planned |
 
-```bash
-cd my-website
-npm run start
-```
+## How to Navigate These Docs
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+**New to dappTerminal?**
+Start with [Concepts: Overview](./concepts/overview.md) for the non-math mental model, then [Guides: Getting Started](./guides/getting-started.md) to run it locally.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+**Building a plugin?**
+Read [Architecture: Plugin System](./architecture/plugin-system.md), then follow [Guides: Create a Plugin](./guides/create-a-plugin.md).
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+**Curious about the math?**
+[Concepts: Algebraic Core](./concepts/algebraic-core.md) covers the fibered monoid specification. [Concepts: Resolution Operators](./concepts/resolution-operators.md) covers π, σ, ρ, ρ_f.
+
+**Integrating a DeFi protocol?**
+[Protocols: Overview](./protocols/overview.md) has the comparison table. [Protocols: Transaction Lifecycle](./protocols/transaction-lifecycle.md) documents the common quote → execute → status pattern.
+
+**Looking for market data commands?**
+[Market Data: Overview](./market-data/overview.md) explains the `--protocol` flag and provider hierarchy.
+
+**Need command or API reference?**
+[Reference: Core Commands](./reference/core-commands) and [Reference: API Routes](./reference/api-routes).
+
+## Key Design Decisions
+
+**Why a terminal UI?** A terminal naturally maps to the command registry model: one input, one resolved command, one structured result. The algebraic structure (fibered monoid) was chosen specifically because it makes the type-safety and isolation properties of this model provable.
+
+**Why a fibered monoid?** Each DeFi protocol is independent — you don't want a bug in Wormhole to affect 1inch commands. The fibered monoid gives each protocol its own submonoid (fiber), with mathematical closure and isolation guarantees. See [Concepts: Algebraic Core](./concepts/algebraic-core.md).
+
+**Why Next.js API routes?** API keys must stay server-side. Routing protocol calls through `/api/[protocol]/[action]` keeps secrets off the client and provides a consistent authentication and rate-limiting boundary.
