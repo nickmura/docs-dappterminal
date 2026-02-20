@@ -3,9 +3,9 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'dappTerminal',
+  title: 'dappTerminal Documentation',
   tagline: 'A mathematically rigorous, composable CLI for DeFi protocols',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.svg',
 
   future: {
     v4: true,
