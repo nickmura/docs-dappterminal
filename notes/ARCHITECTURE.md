@@ -3,7 +3,7 @@
 **Last Updated:** 2025-10-17
 **Version:** 0.1.0
 
-This document provides an overview of The DeFi Terminal's system architecture, focusing on how components interact to provide a mathematically rigorous, composable CLI for DeFi protocols.
+This document provides an overview of The DeFi Terminal's system architecture, focusing on how components interact to provide a composable, execution-driven CLI for DeFi protocols.
 
 ---
 

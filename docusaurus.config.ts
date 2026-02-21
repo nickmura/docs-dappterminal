@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'dappTerminal Documentation',
-  tagline: 'A mathematically rigorous, composable CLI for DeFi protocols',
+  tagline: 'A composable, execution-driven CLI for DeFi protocols',
   favicon: 'img/icon.svg',
 
   future: {
